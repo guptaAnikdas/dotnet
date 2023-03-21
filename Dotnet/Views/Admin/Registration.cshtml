@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<a href="Home">Home</a>
+
+<h2>Registration</h2>
+
+<form action="" method="post">
+
+    Id:
+    <input type="text" placeholder="Enter your Id" name="id" class="form-control" /> <br />
+
+    Name:
+    <input type="text" placeholder="Enter your Name" name="name" class="form-control" /> <br />
+
+    Contact number:
+    <input type="text" placeholder="Enter your conatct number" name="contact" class="form-control" /> <br />
+
+    Address:
+    <input type="text" placeholder="Enter your address/location" name="address" class="form-control" /> <br />
+
+    E-mail:
+    <input type="text" placeholder="Enter your e-mail" name="email" class="form-control" /> <br />
+
+    Password:
+    <input type="text" placeholder="Enter your password" name="password" class="form-control" /> <br />
+
+    Register As:
+    <select id="type" name="Type" class="btn btn-secondary dropdown-toggle">
+        <option value="Admin">Admin</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Employee">Employee</option>
+    </select>
+    <br />
+    <input type="submit" value="Register" class="btn btn-success" />
+</form>

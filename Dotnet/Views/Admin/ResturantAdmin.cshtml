@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ResturantAdmin";
+}
+
+
+<h3><u>Admin Dashboard</u></h3>
+<a href="/Admin/AdminDashboard">Requests</a>
+<a href="/Admin/AdminHistory"> History </a>
+<a href="/Admin/ResturantAdmin"> Restaurants </a>
+<a href="/Admin/EmployeeAdmin"> Employees </a>
+<a href="/Admin/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    @foreach (var st in Model)
+    {
+        if (st.type == "Restaurant")
+        {
+            <tr>
+                <td>@st.id</td>
+                <td>@st.name</td>
+                <td>@st.contact</td>
+                <td>@st.address</td>
+                <td>@st.email</td>
+                <td>@st.password</td>
+                <td>@st.type</td>
+
+            </tr>
+
+        }
+
+    }
+
+</table>
+
+

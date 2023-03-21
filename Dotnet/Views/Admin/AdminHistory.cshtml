@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "AdminHistory";
+}
+
+<h3><u>Admin Dashboard</u></h3>
+<a href="/Reg/AdminDashboard">Requests</a>
+<a href="/Reg/AdminHistory"> History </a>
+<a href="/Reg/ResAdmin"> Restaurants </a>
+<a href="/Reg/EmpAdmin"> Employees </a>
+<a href="/Reg/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Resturant ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Preserve</th>
+        <th>Status</th>
+        <th>Assign</th>
+        <!--<th>Action</th>-->
+    </tr>
+    @foreach (var or in Model)
+    {
+
+        <tr>
+            <td>@or.id</td>
+            <td>@or.Resturantid</td>
+            <td>@or.name</td>
+            <td>@or.quantity</td>
+            <td>@or.preserve</td>
+            <td>@or.status</td>
+            <td>@or.assign</td>
+        </tr>
+
+    }
+
+</table>
+
+

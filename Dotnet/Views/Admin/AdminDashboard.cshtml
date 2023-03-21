@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<a href="/Admin/AdminDashboard">Requests</a>
+<a href="/Admin/AdminHistory"> History </a>
+<a href="/Admin/ResturantAdmin"> Restaurants </a>
+<a href="/Admin/EmployeeAdmin"> Employees </a>
+<a href="/Admin/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Resturant ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Preserve</th>
+        <th>Status</th>
+        <th>Assign</th>
+
+
+
+    </tr>
+    @foreach (var or in Model)
+    {
+        if (or.status == "Pickup Requested")
+        {
+
+            <tr>
+                <td>@or.id</td>
+                <td>@or.Resturantid</td>
+                <td>@or.name</td>
+                <td>@or.quantity</td>
+                <td>@or.preserve</td>
+                <td>@or.status</td>
+                <td>@or.assign</td>
+
+
+            </tr>
+        }
+    }
+
+</table>
+
+
